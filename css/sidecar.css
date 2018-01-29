@@ -1,0 +1,23 @@
+.jupyterlab-sidecar.p-Widget.jp-OutputPrompt.jp-OutputArea-prompt {
+  display: none;
+}
+
+.jupyterlab-sidecar {
+  background: var(--jp-layout-color0);
+}
+
+.jp-SideBar.jp-mod-right .p-TabBar-tabCloseIcon {
+  padding: 4px 0px 4px 4px;
+  background-size: 16px;
+  height: 16px;
+  width: 16px;
+  background-image: var(--jp-icon-close);
+  background-position: center;
+  background-repeat: no-repeat;
+  align-self: center;
+}
+
+.jp-SideBar.jp-mod-right .p-TabBar-tabCloseIcon:hover {
+  background-size: 16px;
+  background-image: var(--jp-icon-inverse-close-circle);
+}
