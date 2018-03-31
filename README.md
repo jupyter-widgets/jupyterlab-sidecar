@@ -9,7 +9,7 @@ A sidecar output widget for JupyterLab
 
 ## Installation
 
-Or, if you use jupyterlab:
+If you use jupyterlab:
 
 ```bash
 pip install sidecar
