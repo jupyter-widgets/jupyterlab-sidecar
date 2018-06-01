@@ -13,5 +13,5 @@ If you use jupyterlab:
 
 ```bash
 pip install sidecar
-jupyter labextension install @jupyter-widgets/jupyterlab-manager
+jupyter labextension install @jupyter-widgets/jupyterlab-sidecar
 ```
