@@ -15,3 +15,15 @@ If you use jupyterlab:
 pip install sidecar
 jupyter labextension install @jupyter-widgets/jupyterlab-sidecar
 ```
+
+## Usage
+
+```python
+from sidecar import Sidecar
+from ipywidgets import IntSlider
+
+sc = Sidecar(title='Sidecar Output')
+sl = IntSlider(description='Some slider')
+with sc:
+    display(sl)
+```
