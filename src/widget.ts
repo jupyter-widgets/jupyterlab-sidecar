@@ -23,7 +23,8 @@ class SidecarModel extends OutputModel {
       _view_name: SidecarModel.view_name,
       _view_module: SidecarModel.view_module,
       _view_module_version: SidecarModel.view_module_version,
-      title: 'Sidecar'
+      title: 'Sidecar',
+      anchor: 'main'
     };
   }
 
