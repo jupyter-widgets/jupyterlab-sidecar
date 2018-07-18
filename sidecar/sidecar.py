@@ -23,4 +23,4 @@ class Sidecar(Output):
     _view_module = Unicode(module_name).tag(sync=True)
     _view_module_version = Unicode(EXTENSION_SPEC_VERSION).tag(sync=True)
     title = Unicode('Sidecar').tag(sync=True)
-    anchor = CaselessStrEnum(['main', 'right'], allow_none=False).tag(sync=True)
+    anchor = CaselessStrEnum(['main', 'right'], default_value='main', allow_none=False).tag(sync=True)
