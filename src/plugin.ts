@@ -77,8 +77,7 @@ function activateWidgetExtension(app: JupyterLab, registry: IJupyterWidgetRegist
             //   app.shell.add(w, 'left');
             //   app.shell.expandLeft();
             } else {
-              app.shell.addToMainArea(w);
-              w.activate()
+              app.shell.addToMainArea(w, {mode: anchor});
             }
           }
         }
