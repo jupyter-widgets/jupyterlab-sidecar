@@ -1,9 +1,9 @@
-.jupyterlab-sidecar.p-Widget.jp-OutputPrompt.jp-OutputArea-prompt {
-  display: none;
-}
-
 .jupyterlab-sidecar {
   background: var(--jp-layout-color0);
+}
+
+.jupyterlab-sidecar .jp-OutputPrompt.jp-OutputArea-prompt {
+  display: none;
 }
 
 .jp-SideBar.jp-mod-right .p-TabBar-tabCloseIcon {
