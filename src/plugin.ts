@@ -6,12 +6,8 @@ import {
 } from '@jupyterlab/application';
 
 import {
-    uuid
-} from '@jupyterlab/coreutils';
-
-import {
-  Widget
-} from '@phosphor/widgets';
+    UUID
+} from '@phosphor/coreutils';
 
 import {
   IJupyterWidgetRegistry
@@ -35,8 +31,6 @@ import '../css/sidecar.css';
 
 const EXTENSION_ID = '@jupyter-widgets/jupyterlab-sidecar';
 
-/**
- */
 const sidecarPlugin: JupyterLabPlugin<void> = {
   id: EXTENSION_ID,
   requires: [IJupyterWidgetRegistry],
@@ -65,7 +59,7 @@ function activateWidgetExtension(app: JupyterLab, registry: IJupyterWidgetRegist
           app.shell['_rightHandler'].sideBar.tabCloseRequested.connect((sender : any, tab : any) => {
               tab.title.owner.dispose();
           });
-          w.id = uuid();
+          w.id = UUID.uuid4();
           if (Object.keys(this.model.views).length > 1) {
             w.node.style.display = 'none';
             let key = Object.keys(this.model.views)[0];
@@ -76,7 +70,6 @@ function activateWidgetExtension(app: JupyterLab, registry: IJupyterWidgetRegist
             app.shell.addToRightArea(w);
             app.shell.expandRight();
           }
-          var that = this;
         }
       }
     }

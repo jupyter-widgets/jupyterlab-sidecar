@@ -8,10 +8,6 @@ import {
 } from '@jupyter-widgets/jupyterlab-manager/lib/output';
 
 import {
-    KernelMessage
-} from '@jupyterlab/services';
-
-import {
   EXTENSION_SPEC_VERSION
 } from './version';
 
@@ -36,7 +32,7 @@ class SidecarModel extends OutputModel {
     this.widget_manager.display_model(undefined, this, {});
   }
 
-  static serializers = {
+  static serializers : any = {
       ...OutputModel.serializers,
       // Add any extra serializers here
     }

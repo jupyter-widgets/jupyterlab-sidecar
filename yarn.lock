@@ -2,11 +2,11 @@
 # yarn lockfile v1
 
 
-"@jupyter-widgets/base@^1.0.1", "@jupyter-widgets/base@^1.1.8":
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/@jupyter-widgets/base/-/base-1.1.8.tgz#91b54268582d1dfda4661a6e2086ce57c2eeb1a7"
+"@jupyter-widgets/base@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@jupyter-widgets/base/-/base-1.2.1.tgz#dafcbb20a4031a63e0d284b7d045ce57d2e69c1f"
   dependencies:
-    "@jupyterlab/services" "^1.0.1"
+    "@jupyterlab/services" "^1.0.1 || ^2.0.0 || ^3.0.0"
     "@phosphor/coreutils" "^1.2.0"
     "@phosphor/messaging" "^1.2.1"
     "@phosphor/widgets" "^1.3.0"
@@ -17,11 +17,11 @@
     jquery "^3.1.1"
     lodash "^4.17.4"
 
-"@jupyter-widgets/controls@^1.1.6":
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/@jupyter-widgets/controls/-/controls-1.1.6.tgz#d01df38a7454d20a43f32723688f0fcd2c82ce0d"
+"@jupyter-widgets/controls@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@jupyter-widgets/controls/-/controls-1.4.0.tgz#aade33196a4e740d3c216485f4f878220131e0dc"
   dependencies:
-    "@jupyter-widgets/base" "^1.1.8"
+    "@jupyter-widgets/base" "^1.2.1"
     "@phosphor/algorithm" "^1.1.0"
     "@phosphor/domutils" "^1.1.0"
     "@phosphor/messaging" "^1.2.1"
@@ -32,21 +32,21 @@
     jquery-ui "^1.12.1"
     underscore "^1.8.3"
 
-"@jupyter-widgets/jupyterlab-manager@^0.33.1":
-  version "0.33.2"
-  resolved "https://registry.yarnpkg.com/@jupyter-widgets/jupyterlab-manager/-/jupyterlab-manager-0.33.2.tgz#28f3ef1aa9c2797c04aefe6596f193a5c2dbee39"
+"@jupyter-widgets/jupyterlab-manager@^0.36.1":
+  version "0.36.2"
+  resolved "https://registry.yarnpkg.com/@jupyter-widgets/jupyterlab-manager/-/jupyterlab-manager-0.36.2.tgz#050d880de59c3dc754b259eb2aa0f45a19185643"
   dependencies:
-    "@jupyter-widgets/base" "^1.1.8"
-    "@jupyter-widgets/controls" "^1.1.6"
-    "@jupyter-widgets/output" "^1.0.15"
-    "@jupyterlab/application" "^0.15.0"
-    "@jupyterlab/coreutils" "^1.0.1"
-    "@jupyterlab/docregistry" "^0.15.0"
-    "@jupyterlab/notebook" "^0.15.0"
-    "@jupyterlab/outputarea" "^0.15.0"
-    "@jupyterlab/rendermime" "^0.15.0"
-    "@jupyterlab/rendermime-interfaces" "^1.0.1"
-    "@jupyterlab/services" "^1.0.1"
+    "@jupyter-widgets/base" "^1.2.1"
+    "@jupyter-widgets/controls" "^1.4.0"
+    "@jupyter-widgets/output" "^1.1.1"
+    "@jupyterlab/application" "^0.17.0"
+    "@jupyterlab/coreutils" "^2.0.0"
+    "@jupyterlab/docregistry" "^0.17.0"
+    "@jupyterlab/notebook" "^0.17.0"
+    "@jupyterlab/outputarea" "^0.17.0"
+    "@jupyterlab/rendermime" "^0.17.0"
+    "@jupyterlab/rendermime-interfaces" "^1.1.0"
+    "@jupyterlab/services" "^3.0.0"
     "@phosphor/disposable" "^1.1.1"
     "@phosphor/messaging" "^1.2.1"
     "@phosphor/widgets" "^1.3.0"
@@ -54,40 +54,40 @@
     jquery "^3.1.1"
     semver "^5.1.0"
 
-"@jupyter-widgets/output@^1.0.15":
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/@jupyter-widgets/output/-/output-1.0.15.tgz#40d4c83f53da31eacb09501f97e3490c5efb2f4a"
+"@jupyter-widgets/output@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jupyter-widgets/output/-/output-1.1.1.tgz#938ae86863077d55299f97c9100e9dec5322f562"
   dependencies:
-    "@jupyter-widgets/base" "^1.1.8"
+    "@jupyter-widgets/base" "^1.2.1"
 
-"@jupyterlab/application@^0.15.0":
-  version "0.15.4"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/application/-/application-0.15.4.tgz#c42487ad41a6a1658eb2dfabb94fcdd4dda44ef6"
+"@jupyterlab/application@^0.17.0":
+  version "0.17.2"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/application/-/application-0.17.2.tgz#cc8c936438a4ce206fa2d51930b241f15a748efb"
   dependencies:
-    "@jupyterlab/apputils" "^0.15.4"
-    "@jupyterlab/coreutils" "^1.0.6"
-    "@jupyterlab/docregistry" "^0.15.4"
-    "@jupyterlab/rendermime" "^0.15.4"
-    "@jupyterlab/rendermime-interfaces" "^1.0.6"
-    "@jupyterlab/services" "^1.1.4"
+    "@jupyterlab/apputils" "^0.17.2"
+    "@jupyterlab/coreutils" "^2.0.2"
+    "@jupyterlab/docregistry" "^0.17.2"
+    "@jupyterlab/rendermime" "^0.17.2"
+    "@jupyterlab/rendermime-interfaces" "^1.1.2"
+    "@jupyterlab/services" "^3.0.3"
     "@phosphor/algorithm" "^1.1.2"
-    "@phosphor/application" "^1.5.0"
-    "@phosphor/commands" "^1.4.0"
+    "@phosphor/application" "^1.6.0"
+    "@phosphor/commands" "^1.5.0"
     "@phosphor/coreutils" "^1.3.0"
     "@phosphor/disposable" "^1.1.2"
     "@phosphor/messaging" "^1.2.2"
     "@phosphor/properties" "^1.1.2"
     "@phosphor/signaling" "^1.2.2"
-    "@phosphor/widgets" "^1.5.0"
+    "@phosphor/widgets" "^1.6.0"
 
-"@jupyterlab/apputils@^0.15.4", "@jupyterlab/apputils@^0.15.5":
-  version "0.15.5"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/apputils/-/apputils-0.15.5.tgz#90db7beb4ed6f4bedbb1f0ab99105c35d7371fa8"
+"@jupyterlab/apputils@^0.17.2":
+  version "0.17.2"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/apputils/-/apputils-0.17.2.tgz#ccd12ffcca15c68317e28f9a88dca9b782cf4d15"
   dependencies:
-    "@jupyterlab/coreutils" "^1.0.6"
-    "@jupyterlab/services" "^1.1.4"
+    "@jupyterlab/coreutils" "^2.0.2"
+    "@jupyterlab/services" "^3.0.3"
     "@phosphor/algorithm" "^1.1.2"
-    "@phosphor/commands" "^1.4.0"
+    "@phosphor/commands" "^1.5.0"
     "@phosphor/coreutils" "^1.3.0"
     "@phosphor/disposable" "^1.1.2"
     "@phosphor/domutils" "^1.1.2"
@@ -95,60 +95,73 @@
     "@phosphor/properties" "^1.1.2"
     "@phosphor/signaling" "^1.2.2"
     "@phosphor/virtualdom" "^1.1.2"
-    "@phosphor/widgets" "^1.5.0"
+    "@phosphor/widgets" "^1.6.0"
     "@types/react" "~16.0.19"
-    react "~16.0.0"
-    react-dom "~16.0.0"
+    react "~16.4.0"
+    react-dom "~16.4.0"
     sanitize-html "~1.14.3"
 
-"@jupyterlab/cells@^0.15.4":
-  version "0.15.4"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/cells/-/cells-0.15.4.tgz#2da2fd5884c07e5223b2a713cfa5594bfd94a6c9"
+"@jupyterlab/attachments@^0.17.2":
+  version "0.17.2"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/attachments/-/attachments-0.17.2.tgz#970ec0c6d9efe6bc029d34d9b501d96ba2eb1500"
   dependencies:
-    "@jupyterlab/apputils" "^0.15.4"
-    "@jupyterlab/codeeditor" "^0.15.4"
-    "@jupyterlab/codemirror" "^0.15.4"
-    "@jupyterlab/coreutils" "^1.0.6"
-    "@jupyterlab/observables" "^1.0.6"
-    "@jupyterlab/outputarea" "^0.15.4"
-    "@jupyterlab/rendermime" "^0.15.4"
-    "@jupyterlab/services" "^1.1.4"
+    "@jupyterlab/coreutils" "^2.0.2"
+    "@jupyterlab/observables" "^2.0.2"
+    "@jupyterlab/rendermime" "^0.17.2"
+    "@jupyterlab/rendermime-interfaces" "^1.1.2"
+    "@phosphor/disposable" "^1.1.2"
+    "@phosphor/signaling" "^1.2.2"
+
+"@jupyterlab/cells@^0.17.2":
+  version "0.17.2"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/cells/-/cells-0.17.2.tgz#4ed415dc46a4a70626e159d0e52c7b945eaa2b30"
+  dependencies:
+    "@jupyterlab/apputils" "^0.17.2"
+    "@jupyterlab/attachments" "^0.17.2"
+    "@jupyterlab/codeeditor" "^0.17.2"
+    "@jupyterlab/codemirror" "^0.17.3"
+    "@jupyterlab/coreutils" "^2.0.2"
+    "@jupyterlab/observables" "^2.0.2"
+    "@jupyterlab/outputarea" "^0.17.2"
+    "@jupyterlab/rendermime" "^0.17.2"
+    "@jupyterlab/services" "^3.0.3"
     "@phosphor/coreutils" "^1.3.0"
     "@phosphor/messaging" "^1.2.2"
     "@phosphor/signaling" "^1.2.2"
-    "@phosphor/widgets" "^1.5.0"
-    react "~16.0.0"
+    "@phosphor/widgets" "^1.6.0"
+    react "~16.4.0"
 
-"@jupyterlab/codeeditor@^0.15.4":
-  version "0.15.4"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/codeeditor/-/codeeditor-0.15.4.tgz#04c9045f8728e751832ca5fd65011d5671792eb8"
+"@jupyterlab/codeeditor@^0.17.2":
+  version "0.17.2"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/codeeditor/-/codeeditor-0.17.2.tgz#4e7a51dfafbae184e71f3bc187684d7a478b5d27"
   dependencies:
-    "@jupyterlab/coreutils" "^1.0.6"
-    "@jupyterlab/observables" "^1.0.6"
+    "@jupyterlab/coreutils" "^2.0.2"
+    "@jupyterlab/observables" "^2.0.2"
     "@phosphor/coreutils" "^1.3.0"
     "@phosphor/disposable" "^1.1.2"
     "@phosphor/messaging" "^1.2.2"
     "@phosphor/signaling" "^1.2.2"
-    "@phosphor/virtualdom" "^1.1.2"
-    "@phosphor/widgets" "^1.5.0"
+    "@phosphor/widgets" "^1.6.0"
+    react "~16.4.0"
+    react-dom "~16.4.0"
 
-"@jupyterlab/codemirror@^0.15.4":
-  version "0.15.4"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/codemirror/-/codemirror-0.15.4.tgz#a694887771b9fe782c0b07fb6affdb560b3bb530"
+"@jupyterlab/codemirror@^0.17.3":
+  version "0.17.3"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/codemirror/-/codemirror-0.17.3.tgz#af07aeed3d611fc66b58aa0178c51c9409403807"
   dependencies:
-    "@jupyterlab/apputils" "^0.15.4"
-    "@jupyterlab/codeeditor" "^0.15.4"
-    "@jupyterlab/coreutils" "^1.0.6"
-    "@jupyterlab/observables" "^1.0.6"
+    "@jupyterlab/apputils" "^0.17.2"
+    "@jupyterlab/codeeditor" "^0.17.2"
+    "@jupyterlab/coreutils" "^2.0.2"
+    "@jupyterlab/observables" "^2.0.2"
     "@phosphor/algorithm" "^1.1.2"
     "@phosphor/coreutils" "^1.3.0"
     "@phosphor/disposable" "^1.1.2"
     "@phosphor/signaling" "^1.2.2"
-    codemirror "~5.24.2"
+    codemirror "~5.39.0"
 
-"@jupyterlab/coreutils@^1.0.1", "@jupyterlab/coreutils@^1.0.6", "@jupyterlab/coreutils@^1.0.9":
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/coreutils/-/coreutils-1.0.10.tgz#259347ec4021e2f1a36b84be4e084631f8fa53a9"
+"@jupyterlab/coreutils@^2.0.0", "@jupyterlab/coreutils@^2.0.2":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/coreutils/-/coreutils-2.0.3.tgz#e68c250d33e6287f7ca73fb84216d7c6f9c28d3a"
   dependencies:
     "@phosphor/algorithm" "^1.1.2"
     "@phosphor/coreutils" "^1.3.0"
@@ -159,39 +172,39 @@
     minimist "~1.2.0"
     moment "~2.21.0"
     path-posix "~1.0.0"
-    url-parse "~1.1.9"
+    url-parse "~1.4.3"
 
-"@jupyterlab/docregistry@^0.15.0", "@jupyterlab/docregistry@^0.15.4", "@jupyterlab/docregistry@^0.15.5":
-  version "0.15.5"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/docregistry/-/docregistry-0.15.5.tgz#582109d7cb582bfacf6e537ca20f6fc6a5d49e12"
+"@jupyterlab/docregistry@^0.17.0", "@jupyterlab/docregistry@^0.17.2":
+  version "0.17.2"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/docregistry/-/docregistry-0.17.2.tgz#fd52569a7dc06a0dac2fdced71f86e153cdf41f0"
   dependencies:
-    "@jupyterlab/apputils" "^0.15.5"
-    "@jupyterlab/codeeditor" "^0.15.4"
-    "@jupyterlab/codemirror" "^0.15.4"
-    "@jupyterlab/coreutils" "^1.0.6"
-    "@jupyterlab/observables" "^1.0.6"
-    "@jupyterlab/rendermime" "^0.15.4"
-    "@jupyterlab/rendermime-interfaces" "^1.0.6"
-    "@jupyterlab/services" "^1.1.4"
+    "@jupyterlab/apputils" "^0.17.2"
+    "@jupyterlab/codeeditor" "^0.17.2"
+    "@jupyterlab/codemirror" "^0.17.3"
+    "@jupyterlab/coreutils" "^2.0.2"
+    "@jupyterlab/observables" "^2.0.2"
+    "@jupyterlab/rendermime" "^0.17.2"
+    "@jupyterlab/rendermime-interfaces" "^1.1.2"
+    "@jupyterlab/services" "^3.0.3"
     "@phosphor/algorithm" "^1.1.2"
     "@phosphor/coreutils" "^1.3.0"
     "@phosphor/disposable" "^1.1.2"
     "@phosphor/messaging" "^1.2.2"
     "@phosphor/signaling" "^1.2.2"
-    "@phosphor/widgets" "^1.5.0"
+    "@phosphor/widgets" "^1.6.0"
 
-"@jupyterlab/notebook@^0.15.0":
-  version "0.15.7"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/notebook/-/notebook-0.15.7.tgz#e32ffe1dd859915ce4ce35d97971cb6a3158fd5b"
+"@jupyterlab/notebook@^0.17.0":
+  version "0.17.2"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/notebook/-/notebook-0.17.2.tgz#2e3227b03f2f371000a90aff5600e0243655c166"
   dependencies:
-    "@jupyterlab/apputils" "^0.15.5"
-    "@jupyterlab/cells" "^0.15.4"
-    "@jupyterlab/codeeditor" "^0.15.4"
-    "@jupyterlab/coreutils" "^1.0.9"
-    "@jupyterlab/docregistry" "^0.15.5"
-    "@jupyterlab/observables" "^1.0.6"
-    "@jupyterlab/rendermime" "^0.15.4"
-    "@jupyterlab/services" "^1.1.4"
+    "@jupyterlab/apputils" "^0.17.2"
+    "@jupyterlab/cells" "^0.17.2"
+    "@jupyterlab/codeeditor" "^0.17.2"
+    "@jupyterlab/coreutils" "^2.0.2"
+    "@jupyterlab/docregistry" "^0.17.2"
+    "@jupyterlab/observables" "^2.0.2"
+    "@jupyterlab/rendermime" "^0.17.2"
+    "@jupyterlab/services" "^3.0.3"
     "@phosphor/algorithm" "^1.1.2"
     "@phosphor/coreutils" "^1.3.0"
     "@phosphor/domutils" "^1.1.2"
@@ -200,11 +213,12 @@
     "@phosphor/properties" "^1.1.2"
     "@phosphor/signaling" "^1.2.2"
     "@phosphor/virtualdom" "^1.1.2"
-    "@phosphor/widgets" "^1.5.0"
+    "@phosphor/widgets" "^1.6.0"
+    react "~16.4.0"
 
-"@jupyterlab/observables@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/observables/-/observables-1.0.6.tgz#84961fab2833e3519578d4911c761bb3798ac919"
+"@jupyterlab/observables@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/observables/-/observables-2.0.2.tgz#6f1c74c462d4984979b837eb8b6286a3470b4293"
   dependencies:
     "@phosphor/algorithm" "^1.1.2"
     "@phosphor/coreutils" "^1.3.0"
@@ -212,53 +226,54 @@
     "@phosphor/messaging" "^1.2.2"
     "@phosphor/signaling" "^1.2.2"
 
-"@jupyterlab/outputarea@^0.15.0", "@jupyterlab/outputarea@^0.15.4":
-  version "0.15.6"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/outputarea/-/outputarea-0.15.6.tgz#cc82baae4fd4f72c120b7c26c782a228b1e410d7"
+"@jupyterlab/outputarea@^0.17.0", "@jupyterlab/outputarea@^0.17.2":
+  version "0.17.3"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/outputarea/-/outputarea-0.17.3.tgz#52b59edd8c65f47e1737ee5bc884ba4b819b55d9"
   dependencies:
-    "@jupyterlab/apputils" "^0.15.5"
-    "@jupyterlab/coreutils" "^1.0.9"
-    "@jupyterlab/observables" "^1.0.6"
-    "@jupyterlab/rendermime" "^0.15.4"
-    "@jupyterlab/rendermime-interfaces" "^1.0.6"
-    "@jupyterlab/services" "^1.1.4"
+    "@jupyterlab/apputils" "^0.17.2"
+    "@jupyterlab/coreutils" "^2.0.2"
+    "@jupyterlab/observables" "^2.0.2"
+    "@jupyterlab/rendermime" "^0.17.3"
+    "@jupyterlab/rendermime-interfaces" "^1.1.2"
+    "@jupyterlab/services" "^3.0.3"
     "@phosphor/algorithm" "^1.1.2"
     "@phosphor/coreutils" "^1.3.0"
     "@phosphor/disposable" "^1.1.2"
     "@phosphor/messaging" "^1.2.2"
     "@phosphor/signaling" "^1.2.2"
-    "@phosphor/widgets" "^1.5.0"
+    "@phosphor/widgets" "^1.6.0"
 
-"@jupyterlab/rendermime-interfaces@^1.0.1", "@jupyterlab/rendermime-interfaces@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/rendermime-interfaces/-/rendermime-interfaces-1.0.6.tgz#e3477d194581019930672d4d7bf37d75eb5fb9fb"
+"@jupyterlab/rendermime-interfaces@^1.1.0", "@jupyterlab/rendermime-interfaces@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/rendermime-interfaces/-/rendermime-interfaces-1.1.2.tgz#634a44032e2ed5f6e129e92fab19e7e5fd7fa22a"
   dependencies:
     "@phosphor/coreutils" "^1.3.0"
-    "@phosphor/widgets" "^1.5.0"
+    "@phosphor/widgets" "^1.6.0"
 
-"@jupyterlab/rendermime@^0.15.0", "@jupyterlab/rendermime@^0.15.4":
-  version "0.15.4"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/rendermime/-/rendermime-0.15.4.tgz#b715e2349eca3517bdb5169261c17f899d6ddd3b"
+"@jupyterlab/rendermime@^0.17.0", "@jupyterlab/rendermime@^0.17.2", "@jupyterlab/rendermime@^0.17.3":
+  version "0.17.3"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/rendermime/-/rendermime-0.17.3.tgz#b8278c48b4c5668941362c5e8262da52130e6f79"
   dependencies:
-    "@jupyterlab/apputils" "^0.15.4"
-    "@jupyterlab/codemirror" "^0.15.4"
-    "@jupyterlab/coreutils" "^1.0.6"
-    "@jupyterlab/observables" "^1.0.6"
-    "@jupyterlab/rendermime-interfaces" "^1.0.6"
-    "@jupyterlab/services" "^1.1.4"
+    "@jupyterlab/apputils" "^0.17.2"
+    "@jupyterlab/codemirror" "^0.17.3"
+    "@jupyterlab/coreutils" "^2.0.2"
+    "@jupyterlab/observables" "^2.0.2"
+    "@jupyterlab/rendermime-interfaces" "^1.1.2"
+    "@jupyterlab/services" "^3.0.3"
+    "@phosphor/algorithm" "^1.1.2"
     "@phosphor/coreutils" "^1.3.0"
     "@phosphor/messaging" "^1.2.2"
     "@phosphor/signaling" "^1.2.2"
-    "@phosphor/widgets" "^1.5.0"
-    ansi_up "~1.3.0"
-    marked "~0.3.9"
+    "@phosphor/widgets" "^1.6.0"
+    ansi_up "^3.0.0"
+    marked "~0.4.0"
 
-"@jupyterlab/services@^1.0.1", "@jupyterlab/services@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/services/-/services-1.1.4.tgz#7c0b8712b38e19f993ae6ddd1c2ced79da2c1a5d"
+"@jupyterlab/services@^1.0.1 || ^2.0.0 || ^3.0.0", "@jupyterlab/services@^3.0.0", "@jupyterlab/services@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/services/-/services-3.0.3.tgz#b2abe2095f04422d61a6c57bc3cefd2ad1ed63ff"
   dependencies:
-    "@jupyterlab/coreutils" "^1.0.6"
-    "@jupyterlab/observables" "^1.0.6"
+    "@jupyterlab/coreutils" "^2.0.2"
+    "@jupyterlab/observables" "^2.0.2"
     "@phosphor/algorithm" "^1.1.2"
     "@phosphor/coreutils" "^1.3.0"
     "@phosphor/disposable" "^1.1.2"
@@ -270,13 +285,13 @@
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@phosphor/algorithm/-/algorithm-1.1.2.tgz#fd1de9104c9a7f34e92864586ddf2e7f2e7779e8"
 
-"@phosphor/application@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@phosphor/application/-/application-1.5.0.tgz#8d44677b1d62a54de90926bf25c921e7a5a25a49"
+"@phosphor/application@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@phosphor/application/-/application-1.6.0.tgz#e1f1bf300680f982881d222a77b24ba8589d3fa2"
   dependencies:
-    "@phosphor/commands" "^1.4.0"
+    "@phosphor/commands" "^1.5.0"
     "@phosphor/coreutils" "^1.3.0"
-    "@phosphor/widgets" "^1.5.0"
+    "@phosphor/widgets" "^1.6.0"
 
 "@phosphor/collections@^1.1.2":
   version "1.1.2"
@@ -287,6 +302,17 @@
 "@phosphor/commands@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@phosphor/commands/-/commands-1.4.0.tgz#7e236a4c015daf37a9586fde29188c3dac20162f"
+  dependencies:
+    "@phosphor/algorithm" "^1.1.2"
+    "@phosphor/coreutils" "^1.3.0"
+    "@phosphor/disposable" "^1.1.2"
+    "@phosphor/domutils" "^1.1.2"
+    "@phosphor/keyboard" "^1.1.2"
+    "@phosphor/signaling" "^1.2.2"
+
+"@phosphor/commands@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@phosphor/commands/-/commands-1.5.0.tgz#68c137008e2d536828405fd4ebab43675d65d42b"
   dependencies:
     "@phosphor/algorithm" "^1.1.2"
     "@phosphor/coreutils" "^1.3.0"
@@ -343,12 +369,28 @@
   dependencies:
     "@phosphor/algorithm" "^1.1.2"
 
-"@phosphor/widgets@^1.3.0", "@phosphor/widgets@^1.5.0":
+"@phosphor/widgets@^1.3.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@phosphor/widgets/-/widgets-1.5.0.tgz#5f998e86f5fde78d8aa44d7dc147686ca661681e"
   dependencies:
     "@phosphor/algorithm" "^1.1.2"
     "@phosphor/commands" "^1.4.0"
+    "@phosphor/coreutils" "^1.3.0"
+    "@phosphor/disposable" "^1.1.2"
+    "@phosphor/domutils" "^1.1.2"
+    "@phosphor/dragdrop" "^1.3.0"
+    "@phosphor/keyboard" "^1.1.2"
+    "@phosphor/messaging" "^1.2.2"
+    "@phosphor/properties" "^1.1.2"
+    "@phosphor/signaling" "^1.2.2"
+    "@phosphor/virtualdom" "^1.1.2"
+
+"@phosphor/widgets@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@phosphor/widgets/-/widgets-1.6.0.tgz#ebba8008b6b13247d03e73e5f3872c90d2c9c78f"
+  dependencies:
+    "@phosphor/algorithm" "^1.1.2"
+    "@phosphor/commands" "^1.5.0"
     "@phosphor/coreutils" "^1.3.0"
     "@phosphor/disposable" "^1.1.2"
     "@phosphor/domutils" "^1.1.2"
@@ -474,9 +516,9 @@ ansi-wrap@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/ansi-wrap/-/ansi-wrap-0.1.0.tgz#a82250ddb0015e9a27ca82e82ea603bbfa45efaf"
 
-ansi_up@~1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/ansi_up/-/ansi_up-1.3.0.tgz#c9c946bfc0b9bb5eaa060684bf2abaafe68bbd44"
+ansi_up@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/ansi_up/-/ansi_up-3.0.0.tgz#27f45d8f457d9ceff59e4ea03c8e6f13c1a303e8"
 
 anymatch@^1.3.0:
   version "1.3.2"
@@ -882,9 +924,9 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
-codemirror@~5.24.2:
-  version "5.24.2"
-  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.24.2.tgz#b55ca950fa009709c37df68eb133310ed89cf2fe"
+codemirror@~5.39.0:
+  version "5.39.2"
+  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.39.2.tgz#778aa13b55ebf280745c309cb1b148e3fc06f698"
 
 color-convert@^1.9.0:
   version "1.9.1"
@@ -2406,9 +2448,9 @@ map-stream@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/map-stream/-/map-stream-0.1.0.tgz#e56aa94c4c8055a16404a0674b78f215f7c8e194"
 
-marked@~0.3.9:
-  version "0.3.18"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.18.tgz#3ef058cd926101849b92a7a7c15db18c7fc76b2f"
+marked@~0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.4.0.tgz#9ad2c2a7a1791f10a852e0112f77b571dce10c66"
 
 md5.js@^1.3.4:
   version "1.3.4"
@@ -2951,9 +2993,9 @@ querystring@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
 
-querystringify@~1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-1.0.0.tgz#6286242112c5b712fa654e526652bf6a13ff05cb"
+querystringify@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.0.0.tgz#fa3ed6e68eb15159457c89b37bc6472833195755"
 
 randomatic@^1.1.3:
   version "1.1.7"
@@ -2997,18 +3039,18 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@~16.0.0:
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.0.0.tgz#9cc3079c3dcd70d4c6e01b84aab2a7e34c303f58"
+react-dom@~16.4.0:
+  version "16.4.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.4.2.tgz#4afed569689f2c561d2b8da0b819669c38a0bda4"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react@~16.0.0:
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.0.0.tgz#ce7df8f1941b036f02b2cca9dbd0cb1f0e855e2d"
+react@~16.4.0:
+  version "16.4.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.4.2.tgz#2cd90154e3a9d9dd8da2991149fdca3c260e129f"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -3161,7 +3203,7 @@ request@2.81.0:
     tunnel-agent "^0.6.0"
     uuid "^3.0.0"
 
-requires-port@1.0.x, requires-port@1.x.x:
+requires-port@1.x.x, requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
 
@@ -3659,12 +3701,12 @@ unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
 
-url-parse@~1.1.9:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.1.9.tgz#c67f1d775d51f0a18911dd7b3ffad27bb9e5bd19"
+url-parse@~1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.3.tgz#bfaee455c889023219d757e045fa6a684ec36c15"
   dependencies:
-    querystringify "~1.0.0"
-    requires-port "1.0.x"
+    querystringify "^2.0.0"
+    requires-port "^1.0.0"
 
 url@^0.11.0:
   version "0.11.0"
