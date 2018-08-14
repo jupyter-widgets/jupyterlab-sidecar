@@ -23,7 +23,7 @@
   "scripts": {
     "build": "npm run build:lib",
     "build:labextension": "cd sidecar && rimraf labextension && mkdirp labextension && cd labextension && npm pack ../..",
-    "build:lib": "tsc --project src",
+    "build:lib": "tsc",
     "build:all": "npm run build:lib && npm run build:labextension",
     "clean": "npm run clean:lib",
     "clean:lib": "rimraf lib",
@@ -35,15 +35,15 @@
     "test:firefox": "karma start --browsers=Firefox tests/karma.conf.js",
     "test:ie": "karma start --browsers=IE tests/karma.conf.js",
     "watch": "npm-run-all -p watch:*",
-    "watch:lib": "tsc -w --project src"
+    "watch:lib": "tsc"
   },
   "dependencies": {
-    "@jupyter-widgets/base": "^1.0.1",
-    "@jupyter-widgets/jupyterlab-manager": "^0.33.1"
+    "@jupyter-widgets/base": "^1.2.1",
+    "@jupyter-widgets/jupyterlab-manager": "^0.36.1"
   },
   "devDependencies": {
-    "@phosphor/application": "^1.5.0",
-    "@phosphor/widgets": "^1.5.0",
+    "@phosphor/application": "^1.6.0",
+    "@phosphor/widgets": "^1.6.0",
     "@types/expect.js": "^0.3.29",
     "@types/mocha": "^2.2.41",
     "@types/node": "^8.0.17",
