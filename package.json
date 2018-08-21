@@ -1,6 +1,6 @@
 {
   "name": "@jupyter-widgets/jupyterlab-sidecar",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A sidecar output widget for JupyterLab",
   "keywords": [
     "jupyter",
@@ -42,7 +42,6 @@
     "@jupyter-widgets/jupyterlab-manager": "^0.37.2"
   },
   "devDependencies": {
-    "@jupyterlab/application": "^0.18.2",
     "@phosphor/application": "^1.6.0",
     "@phosphor/widgets": "^1.6.0",
     "@types/expect.js": "^0.3.29",
