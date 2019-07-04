@@ -2,7 +2,7 @@
 // Distributed under the terms of the Modified BSD License.
 
 import {
-  JupyterLab, JupyterLabPlugin
+  JupyterLab, JupyterFrontEndPlugin
 } from '@jupyterlab/application';
 
 import {
@@ -11,13 +11,11 @@ import {
 
 import {
   IJupyterWidgetRegistry
- } from '@jupyter-widgets/base';
+} from '@jupyter-widgets/base';
 
-// TODO: import from @jupyter-widgets/jupyterlab-manager once Output is
-// exported by the main module.
 import {
-   OutputView
-} from '@jupyter-widgets/jupyterlab-manager/lib/output';
+  output
+} from '@jupyter-widgets/jupyterlab-manager';
 
 import {
   SidecarModel
@@ -31,7 +29,7 @@ import '../css/sidecar.css';
 
 const EXTENSION_ID = '@jupyter-widgets/jupyterlab-sidecar';
 
-const sidecarPlugin: JupyterLabPlugin<void> = {
+const sidecarPlugin: JupyterFrontEndPlugin<void> = {
   id: EXTENSION_ID,
   requires: [IJupyterWidgetRegistry],
   activate: activateWidgetExtension,
@@ -45,7 +43,7 @@ export default sidecarPlugin;
  * Activate the widget extension.
  */
 function activateWidgetExtension(app: JupyterLab, registry: IJupyterWidgetRegistry): void {
-    let SidecarView = class extends OutputView {
+    let SidecarView = class extends output.OutputView {
       model: SidecarModel;
 
       render() {
@@ -63,11 +61,11 @@ function activateWidgetExtension(app: JupyterLab, registry: IJupyterWidgetRegist
           if (Object.keys(this.model.views).length > 1) {
             w.node.style.display = 'none';
             let key = Object.keys(this.model.views)[0];
-            this.model.views[key].then((v: OutputView) => {
+            this.model.views[key].then((v: output.OutputView) => {
               v._outputView.activate();
             });
           } else {
-            app.shell.addToRightArea(w);
+            app.shell.add(w, 'right');
             app.shell.expandRight();
           }
         }

@@ -1,9 +1,14 @@
 .jupyterlab-sidecar {
   background: var(--jp-layout-color0);
+  display: flex;
 }
 
 .jupyterlab-sidecar .jp-OutputPrompt.jp-OutputArea-prompt {
   display: none;
+}
+
+.jupyterlab-sidecar > .jp-OutputArea-child {
+  flex: 1;
 }
 
 .jp-SideBar.jp-mod-right .p-TabBar-tabCloseIcon {
