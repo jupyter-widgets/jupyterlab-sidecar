@@ -35,3 +35,31 @@ the vertical space available. If more content is displayed, the natural height
 is used instead.
 
 ![sidecar](sidecar.gif)
+
+## Development
+
+```bash
+# Create a new conda environment
+conda create -n jupyterlab-sidecar -c conda-forge jupyterlab ipywidgets nodejs
+
+# Activate the conda environment
+conda activate jupyterlab-sidecar
+
+# Install dependencies
+jlpm
+
+# Build Typescript source
+jlpm build
+
+# Link your development version of the extension with JupyterLab
+jupyter labextension link .
+
+# Rebuild Typescript source after making changes
+jlpm build
+
+# Rebuild JupyterLab after making any changes
+jupyter lab build
+
+# Install the sidecar Python package
+python -m pip install -e .
+```
