@@ -29,6 +29,7 @@ class SidecarModel extends OutputModel {
 
   initialize(attributes: any, options: any) {
     super.initialize(attributes, options);
+    // FIXME: Argument of type 'undefined' is not assignable to parameter of type 'IMessage<MessageType>'.
     this.widget_manager.display_model(undefined, this, {});
   }
 

@@ -12,6 +12,8 @@ import {
 } from './utils.spec';
 
 import {
+  // FIXME: Module '"../../src"' has no exported member 'ExampleModel'.
+  // FIXME: Module '"../../src"' has no exported member 'ExampleView'.
   ExampleModel, ExampleView
 } from '../../src/'
 

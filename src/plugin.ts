@@ -7,7 +7,7 @@ import {
 
 import {
     UUID
-} from '@phosphor/coreutils';
+} from '@lumino/coreutils';
 
 import {
   IJupyterWidgetRegistry

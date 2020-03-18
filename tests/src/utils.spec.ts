@@ -21,6 +21,7 @@ class MockComm {
     on_msg(fn: Function | null) {
         this._on_msg = fn;
     }
+    // FIXME: Namespace '"REDACTED/jupyterlab-sidecar/node_modules/@jupyterlab/services/lib/kernel/messages"' has no exported member 'ICommMsg'.
     _process_msg(msg: services.KernelMessage.ICommMsg) {
         if (this._on_msg) {
             return this._on_msg(msg);
