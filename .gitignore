@@ -153,3 +153,7 @@ sidecar/labextension/*.tgz
 
 # Packed lab extensions
 sidecar/labextension
+
+# IDE files
+# PyCharm
+.idea/
