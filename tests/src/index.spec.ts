@@ -12,26 +12,24 @@ import {
 } from './utils.spec';
 
 import {
-  // FIXME: Module '"../../src"' has no exported member 'ExampleModel'.
-  // FIXME: Module '"../../src"' has no exported member 'ExampleView'.
-  ExampleModel, ExampleView
+  SidecarModel
 } from '../../src/'
 
 
-describe('Example', () => {
+describe('Sidecar', () => {
 
-  describe('ExampleModel', () => {
+  describe('SidecarModel', () => {
 
     it('should be createable', () => {
-      let model = createTestModel(ExampleModel);
-      expect(model).to.be.an(ExampleModel);
+      let model = createTestModel(SidecarModel);
+      expect(model).to.be.an(SidecarModel);
       expect(model.get('value')).to.be('Hello World');
     });
 
     it('should be createable with a value', () => {
       let state = { value: 'Foo Bar!' }
-      let model = createTestModel(ExampleModel, state);
-      expect(model).to.be.an(ExampleModel);
+      let model = createTestModel(SidecarModel, state);
+      expect(model).to.be.an(SidecarModel);
       expect(model.get('value')).to.be('Foo Bar!');
     });
 
