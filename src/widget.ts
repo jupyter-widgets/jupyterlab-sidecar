@@ -29,7 +29,7 @@ class SidecarModel extends OutputModel {
 
   initialize(attributes: any, options: any) {
     super.initialize(attributes, options);
-    this.widget_manager.display_model(undefined, this, {});
+    this.widget_manager.display_model(undefined as any, this, {});
   }
 
   static serializers : any = {

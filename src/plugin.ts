@@ -6,8 +6,8 @@ import {
 } from '@jupyterlab/application';
 
 import {
-    UUID
-} from '@phosphor/coreutils';
+  UUID
+} from '@lumino/coreutils';
 
 import {
   IJupyterWidgetRegistry
