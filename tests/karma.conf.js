@@ -10,6 +10,7 @@ module.exports = function (config) {
       }
     },
     files: [
+      "node_modules/regenerator-runtime/runtime.js",
       { pattern: "tests/src/**/*.ts" },
       { pattern: "src/**/*.ts" }
     ],
@@ -24,6 +25,11 @@ module.exports = function (config) {
 
 
     karmaTypescriptConfig: {
+      bundlerOptions: {
+        transforms: [
+          require("karma-typescript-es6-transform")()
+        ]
+      },
       tsconfig: 'tests/src/tsconfig.json',
       reports: {
         "text-summary": "",
