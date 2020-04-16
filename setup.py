@@ -22,7 +22,7 @@ from setuptools import setup
 name = 'sidecar'
 
 # Ensure a valid python version
-ensure_python('>=3.3')
+ensure_python('>=3.5')
 
 # Get our version
 version = get_version(pjoin(name, '_version.py'))
@@ -80,6 +80,7 @@ setup_args = dict(
     include_package_data = True,
     install_requires = [
         'ipywidgets>=7.5.0',
+        'jupyterlab>=2.0.0,<3'
     ],
     extras_require = {
         'test': [
