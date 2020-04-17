@@ -23,7 +23,7 @@
   "scripts": {
     "build": "npm run build:lib",
     "build:labextension": "cd sidecar && rimraf labextension && mkdirp labextension && cd labextension && npm pack ../..",
-    "build:lib": "tsc",
+    "build:lib": "tsc --sourceMap",
     "build:all": "npm run build:lib && npm run build:labextension",
     "clean": "npm run clean:lib",
     "clean:lib": "rimraf lib",
@@ -66,7 +66,7 @@
     "rimraf": "^3.0.2",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.1",
-    "typescript": "~3.8.3"
+    "typescript": "~3.7.5"
   },
   "jupyterlab": {
     "extension": "lib/plugin"
