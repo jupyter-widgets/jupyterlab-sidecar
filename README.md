@@ -7,12 +7,19 @@ A sidecar output widget for JupyterLab
 
 ## Installation
 
-If you use jupyterlab:
+You can install the sidecar with conda:
+```bash
+conda install -c conda-forge sidecar
+```
 
+Or with pip:
 ```bash
 pip install sidecar
-jupyter labextension install @jupyter-widgets/jupyterlab-manager
-jupyter labextension install @jupyter-widgets/jupyterlab-sidecar
+```
+
+You then need to install the labextension:
+```bash
+jupyter labextension install @jupyter-widgets/jupyterlab-manager @jupyter-widgets/jupyterlab-sidecar
 ```
 
 ## Usage
