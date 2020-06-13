@@ -54,10 +54,6 @@ function activateWidgetExtension(app: JupyterLab, registry: IJupyterWidgetRegist
           w.addClass('jp-LinkedOutputView');
           w.title.label = this.model.get('title');
           w.title.closable = true;
-          // TODO how to make a left tab closable
-          // app.shell['_leftHandler'].sideBar.tabCloseRequested.connect((sender : any, tab : any) => {
-          //     tab.title.owner.dispose();
-          // });
           app.shell['_rightHandler'].sideBar.tabCloseRequested.connect((sender : any, tab : any) => {
               tab.title.owner.dispose();
           });
@@ -73,11 +69,8 @@ function activateWidgetExtension(app: JupyterLab, registry: IJupyterWidgetRegist
             if(anchor === 'right'){
               app.shell.add(w, 'right');
               app.shell.expandRight();
-            // } else if(anchor === 'left') {
-            //   app.shell.add(w, 'left');
-            //   app.shell.expandLeft();
             } else {
-              app.shell.addToMainArea(w, {mode: anchor});
+              app.shell.add(w, 'main', {mode: anchor});
             }
           }
         }
