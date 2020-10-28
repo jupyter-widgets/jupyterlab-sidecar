@@ -46,20 +46,29 @@ conda create -n jupyterlab-sidecar -c conda-forge jupyterlab ipywidgets nodejs
 conda activate jupyterlab-sidecar
 
 # Install dependencies
-jlpm
+npm install
 
 # Build Typescript source
-jlpm build
+npm run build
 
 # Link your development version of the extension with JupyterLab
-jupyter labextension link .
-
-# Rebuild Typescript source after making changes
-jlpm build
-
-# Rebuild JupyterLab after making any changes
-jupyter lab build
+jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
+jupyter labextension install .
 
 # Install the sidecar Python package
 python -m pip install -e .
 ```
+
+### To see your changes
+Run jupyterlab in watch mode:
+
+```bash
+jupyter lab --watch
+```
+
+```
+# Rebuild Typescript source after making changes
+npm build
+```
+
+then refresh the browser page and your changes will be active.
