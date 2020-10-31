@@ -26,5 +26,5 @@ class Sidecar(Output):
     anchor = CaselessStrEnum(
         ['split-right', 'split-left', 'split-top', 'split-bottom', 'tab-before', 'tab-after', 'right'],
         default_value='right', 
-        allow_none=False
+        allow_none=True
     ).tag(sync=True)

@@ -65,7 +65,7 @@ function activateWidgetExtension(app: JupyterLab, registry: IJupyterWidgetRegist
               v._outputView.activate();
             });
           } else {
-            let anchor = this.model.get('anchor');
+            let anchor = this.model.get('anchor') || 'right';
             if(anchor === 'right'){
               app.shell.add(w, 'right');
               app.shell.expandRight();
