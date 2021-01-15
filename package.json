@@ -21,15 +21,14 @@
     "url": "https://github.com/jupyter-widgets/jupyterlab-sidecar"
   },
   "scripts": {
-    "build": "npm run build:lib",
-    "build:labextension": "cd sidecar && rimraf labextension && mkdirp labextension && cd labextension && npm pack ../..",
+    "build": "jlpm run build:lib && jlpm run build:labextension",
+    "build:labextension": "jupyter labextension build .",
     "build:lib": "tsc",
-    "build:all": "npm run build:lib && npm run build:labextension",
-    "clean": "npm run clean:lib",
+    "clean": "jlpm run clean:lib && jlpm run clean:labextension",
     "clean:lib": "rimraf lib",
     "clean:labextension": "rimraf sidecar/labextension",
-    "prepare": "npm run build:lib",
-    "test": "npm run test:firefox",
+    "prepare": "jlpm run build",
+    "test": "jlpm run test:firefox",
     "test:chrome": "karma start --browsers=Chrome tests/karma.conf.js",
     "test:debug": "karma start --browsers=Chrome --singleRun=false --debug=true tests/karma.conf.js",
     "test:firefox": "karma start --browsers=Firefox tests/karma.conf.js",
@@ -38,12 +37,13 @@
     "watch:lib": "tsc"
   },
   "dependencies": {
-    "@jupyter-widgets/base": "^3.0.0",
-    "@jupyter-widgets/jupyterlab-manager": "^2.0.0",
-    "@jupyterlab/application": "^2.0.0",
-    "@lumino/coreutils": "^1.4.2"
+    "@jupyter-widgets/base": "^4.0.0",
+    "@jupyter-widgets/jupyterlab-manager": "^3.0.0",
+    "@jupyterlab/application": "^3.0.0",
+    "@lumino/coreutils": "^1.5.3"
   },
   "devDependencies": {
+    "@jupyterlab/builder": "^3.0.0",
     "@types/expect.js": "^0.3.29",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.9.2",
@@ -66,6 +66,17 @@
     "typescript": "^3.8.3"
   },
   "jupyterlab": {
-    "extension": "lib/plugin"
+    "extension": "lib/plugin",
+    "outputDir": "sidecar/labextension",
+    "sharedPackages": {
+      "@jupyter-widgets/base": {
+        "bundled": false,
+        "singleton": true
+      },
+      "@jupyter-widgets/jupyterlab-manager": {
+        "bundled": false,
+        "singleton": true
+      }
+    }
   }
 }

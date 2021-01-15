@@ -6,3 +6,10 @@
 
 from .sidecar import Sidecar
 from ._version import __version__, version_info
+
+
+def _jupyter_labextension_paths():
+    return [{
+        'src': 'labextension',
+        'dest': '@jupyter-widgets/jupyterlab-sidecar'
+    }]

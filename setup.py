@@ -6,58 +6,71 @@
 
 from __future__ import print_function
 from glob import glob
-from os.path import join as pjoin
+import os
 
 
-from setupbase import (
+from jupyter_packaging import (
     create_cmdclass, install_npm, ensure_targets,
-    find_packages, combine_commands, ensure_python,
-    get_version, HERE
+    combine_commands, ensure_python,
+    get_version, skip_if_exists
 )
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
+HERE = os.path.abspath(os.path.dirname(__file__))
 
 # The name of the project
 name = 'sidecar'
+labext_name = '@jupyter-widgets/jupyterlab-sidecar'
 
 # Ensure a valid python version
-ensure_python('>=3.5')
+ensure_python('>=3.6')
 
 # Get our version
-version = get_version(pjoin(name, '_version.py'))
+version = get_version(os.path.join(name, '_version.py'))
 
-lab_path = pjoin(HERE, name, 'labextension')
+lab_path = os.path.join(HERE, name, 'labextension')
 
 # Representative files that should exist after a successful build
 jstargets = [
-    pjoin(HERE, 'lib', 'plugin.js'),
+    os.path.join(lab_path, "package.json"),
 ]
 
 package_data_spec = {
     name: [
-        'labextension/*.tgz'
+        '*'
     ]
 }
 
 data_files_spec = [
-    ('share/jupyter/lab/extensions', lab_path, '*.tgz'),
+    ("share/jupyter/labextensions/%s" % labext_name, lab_path, "**"),
+    ("share/jupyter/labextensions/%s" % labext_name, HERE, "install.json")
 ]
 
 
-cmdclass = create_cmdclass('jsdeps', package_data_spec=package_data_spec,
-    data_files_spec=data_files_spec)
-cmdclass['jsdeps'] = combine_commands(
-    install_npm(HERE, build_cmd='build:all'),
+cmdclass = create_cmdclass(
+    'jsdeps',
+    package_data_spec=package_data_spec,
+    data_files_spec=data_files_spec
+)
+
+js_command = combine_commands(
+    install_npm(HERE, build_cmd='build', npm=["jlpm"]),
     ensure_targets(jstargets),
 )
+
+is_repo = os.path.exists(os.path.join(HERE, ".git"))
+if is_repo:
+    cmdclass["jsdeps"] = js_command
+else:
+    cmdclass["jsdeps"] = skip_if_exists(jstargets, js_command)
 
 
 setup_args = dict(
     name            = name,
     description     = 'A sidecar output widget for JupyterLab',
     version         = version,
-    scripts         = glob(pjoin('scripts', '*')),
+    scripts         = glob(os.path.join('scripts', '*')),
     cmdclass        = cmdclass,
     packages        = find_packages(),
     author          = 'Project Jupyter',
@@ -72,15 +85,16 @@ setup_args = dict(
         'License :: OSI Approved :: BSD License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Framework :: Jupyter',
     ],
     include_package_data = True,
     install_requires = [
-        'ipywidgets>=7.5.0',
-        'jupyterlab>=2.0.0,<3'
+        'ipywidgets>=7.6.0',
+        'jupyterlab>=3.0.0,<4'
     ],
     extras_require = {
         'test': [

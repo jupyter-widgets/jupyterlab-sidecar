@@ -7,7 +7,7 @@ include .coverage.rc
 
 include package.json
 include webpack.config.js
-include sidecar/labextension/*.tgz
+graft sidecar/labextension
 
 # Documentation
 graft docs
