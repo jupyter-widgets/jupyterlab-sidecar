@@ -7,10 +7,18 @@ A sidecar output widget for JupyterLab
 
 ## Installation
 
-If you use jupyterlab:
-
 ```bash
 pip install sidecar
+```
+
+or
+
+```bash
+conda install sidecar
+```
+
+If you use JupyterLab <=2:
+```bash
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter labextension install @jupyter-widgets/jupyterlab-sidecar
 ```

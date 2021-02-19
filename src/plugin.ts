@@ -10,7 +10,7 @@ import {
 } from '@lumino/coreutils';
 
 import {
-  IJupyterWidgetRegistry
+  IJupyterWidgetRegistry, WidgetView
 } from '@jupyter-widgets/base';
 
 import {
@@ -49,6 +49,7 @@ function activateWidgetExtension(app: JupyterLab, registry: IJupyterWidgetRegist
       render() {
         if (!this.model.rendered) {
           super.render();
+
           let w = this._outputView;
           w.addClass('jupyterlab-sidecar');
           w.addClass('jp-LinkedOutputView');
@@ -58,20 +59,23 @@ function activateWidgetExtension(app: JupyterLab, registry: IJupyterWidgetRegist
               tab.title.owner.dispose();
           });
           w.id = UUID.uuid4();
+
           if (Object.keys(this.model.views).length > 1) {
             w.node.style.display = 'none';
             let key = Object.keys(this.model.views)[0];
-            this.model.views[key].then((v: output.OutputView) => {
-              v._outputView.activate();
+            this.model.views[key].then((v: WidgetView) => {
+              if (v instanceof output.OutputView) {
+                v._outputView.activate();
+              }
             });
           } else {
             let anchor = this.model.get('anchor') || 'right';
             if(anchor === 'right'){
               app.shell.add(w, 'right');
-              app.shell.expandRight();
             } else {
               app.shell.add(w, 'main', {mode: anchor});
             }
+            app.shell.activateById(w.id);
           }
         }
       }
@@ -81,8 +85,8 @@ function activateWidgetExtension(app: JupyterLab, registry: IJupyterWidgetRegist
       name: '@jupyter-widgets/jupyterlab-sidecar',
       version: EXTENSION_SPEC_VERSION,
       exports: {
-        SidecarModel: SidecarModel,
-        SidecarView: SidecarView
+        // @ts-ignore: Why is this not compiling?
+        SidecarModel, SidecarView
       }
   });
 }

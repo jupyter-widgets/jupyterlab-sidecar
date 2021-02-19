@@ -1,18 +1,17 @@
 // Copyright (c) Project Jupyter.
 // Distributed under the terms of the Modified BSD License.
 
-// TODO: import from @jupyter-widgets/jupyterlab-manager once Output is
-// exported by the main module.
 import {
-   OutputModel
-} from '@jupyter-widgets/jupyterlab-manager/lib/output';
+   output
+} from '@jupyter-widgets/jupyterlab-manager';
 
 import {
   EXTENSION_SPEC_VERSION
 } from './version';
 
+
 export
-class SidecarModel extends OutputModel {
+class SidecarModel extends output.OutputModel {
   rendered: boolean;
 
   defaults() {
@@ -30,18 +29,14 @@ class SidecarModel extends OutputModel {
 
   initialize(attributes: any, options: any) {
     super.initialize(attributes, options);
-    this.widget_manager.display_model(undefined as any, this, {});
+
+    this.widget_manager.display_model(undefined as any, this as any, {});
   }
 
-  static serializers : any = {
-      ...OutputModel.serializers,
-      // Add any extra serializers here
-    }
-
   static model_name = 'SidecarModel';
+  static view_name = 'SidecarView';
   static model_module = '@jupyter-widgets/jupyterlab-sidecar';
+  static view_module = '@jupyter-widgets/jupyterlab-sidecar';
   static model_module_version = EXTENSION_SPEC_VERSION;
-  static view_name = 'SidecarView';  // Set to null if no view
-  static view_module = '@jupyter-widgets/jupyterlab-sidecar';   // Set to null if no view
   static view_module_version = EXTENSION_SPEC_VERSION;
 }

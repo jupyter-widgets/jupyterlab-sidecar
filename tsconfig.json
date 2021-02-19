@@ -8,6 +8,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "target": "ES6",
+    "skipLibCheck": true,
     "outDir": "./lib",
     "types": ["node"]
   },
