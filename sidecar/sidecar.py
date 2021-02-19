@@ -9,7 +9,7 @@ TODO: Add module docstring
 """
 
 from ipywidgets import Output
-from traitlets import Unicode
+from traitlets import Unicode, CaselessStrEnum
 from ._version import EXTENSION_SPEC_VERSION
 
 module_name = "@jupyter-widgets/jupyterlab-sidecar"
@@ -23,3 +23,8 @@ class Sidecar(Output):
     _view_module = Unicode(module_name).tag(sync=True)
     _view_module_version = Unicode(EXTENSION_SPEC_VERSION).tag(sync=True)
     title = Unicode('Sidecar').tag(sync=True)
+    anchor = CaselessStrEnum(
+        ['split-right', 'split-left', 'split-top', 'split-bottom', 'tab-before', 'tab-after', 'right'],
+        default_value='right', 
+        allow_none=True
+    ).tag(sync=True)
