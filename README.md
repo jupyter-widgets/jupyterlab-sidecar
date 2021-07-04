@@ -82,6 +82,12 @@ jupyter lab build --minimize=False
 
 ## Uninstall
 
+```bash
+pip uninstall sidecar
 ```
-pip uninstall jupyterlab-sidecar
+
+or
+
+```bash
+conda uninstall sidecar
 ```
