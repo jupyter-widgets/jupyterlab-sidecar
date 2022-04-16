@@ -42,8 +42,8 @@
     "watch:labextension": "jupyter labextension watch ."
   },
   "dependencies": {
-    "@jupyter-widgets/base": "^4 || ^5 || ^6.0.0-rc.0",
-    "@jupyter-widgets/jupyterlab-manager": "^3 || ^4 || ^5.0.0-rc.0",
+    "@jupyter-widgets/base": "6.0.0-rc.0",
+    "@jupyter-widgets/jupyterlab-manager": "5.0.0-rc.0",
     "@jupyterlab/application": "^3.0.0",
     "@lumino/coreutils": "^1.5.3"
   },
@@ -83,5 +83,9 @@
         "singleton": true
       }
     }
+  },
+  "resolutions": {
+    "@jupyter-widgets/base": "6.0.0-rc.0",
+    "@jupyter-widgets/jupyterlab-manager": "5.0.0-rc.0"
   }
 }
