@@ -42,6 +42,8 @@ jobs:
     - name: Check installation files
       shell: bash -l {0}
       run: |
+        echo $CONDA_PREFIX
+        ls $CONDA_PREFIX/share/jupyter/labextensions/@jupyter-widgets/
         test -d $CONDA_PREFIX/share/jupyter/labextensions/@jupyter-widgets/jupyterlab-sidecar
         test -f $CONDA_PREFIX/share/jupyter/labextensions/@jupyter-widgets/jupyterlab-sidecar/package.json
 
