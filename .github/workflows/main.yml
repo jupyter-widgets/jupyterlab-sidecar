@@ -35,6 +35,9 @@ jobs:
     - name: Install sidecar
       shell: bash -l {0}
       run: pip install -ve .
+      env: 
+        # To fix an issue with webpack and openssl3 https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported
+        NODE_OPTIONS: "--openssl-legacy-provider"
 
     - name: Check installation files
       shell: bash -l {0}
