@@ -34,7 +34,7 @@ jobs:
 
     - name: Install sidecar
       shell: bash -l {0}
-      run: pip install -e .
+      run: pip install -ve .
 
     - name: Check installation files
       shell: bash -l {0}
