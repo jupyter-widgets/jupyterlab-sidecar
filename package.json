@@ -1,6 +1,6 @@
 {
   "name": "@jupyter-widgets/jupyterlab-sidecar",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "A sidecar output widget for JupyterLab",
   "keywords": [
     "jupyter",

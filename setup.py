@@ -87,11 +87,16 @@ setup_args = dict(
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
         'Framework :: Jupyter',
+        'Framework :: Jupyter :: JupyterLab',
+        'Framework :: Jupyter :: JupyterLab :: 3',
+        'Framework :: Jupyter :: JupyterLab :: Extensions',
+        'Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt',
     ],
     include_package_data = True,
     install_requires = [
-        'ipywidgets>=7.6.0',
+        'ipywidgets>=7.6.0,<9',
         'jupyterlab>=3.0.0,<4'
     ],
     extras_require = {
