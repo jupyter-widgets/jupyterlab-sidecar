@@ -1,6 +1,7 @@
 // Copyright (c) Project Jupyter.
 // Distributed under the terms of the Modified BSD License.
 
+import { DOMWidgetModel } from '@jupyter-widgets/base';
 import {
    output
 } from '@jupyter-widgets/jupyterlab-manager';
@@ -30,7 +31,8 @@ class SidecarModel extends output.OutputModel {
   initialize(attributes: any, options: any) {
     super.initialize(attributes, options);
 
-    this.widget_manager.display_model(undefined as any, this as any, {});
+    // create_view calls the view's render function, which will display this widget in the sidebar.
+    this.widget_manager.create_view(this as DOMWidgetModel, {})
   }
 
   static model_name = 'SidecarModel';

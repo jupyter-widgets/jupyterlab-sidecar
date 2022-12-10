@@ -2,6 +2,7 @@
 // Distributed under the terms of the Modified BSD License.
 
 import * as widgets from '@jupyter-widgets/base';
+import{ ManagerBase } from '@jupyter-widgets/base-manager';
 import * as services from '@jupyterlab/services';
 import * as Backbone from 'backbone';
 
@@ -47,7 +48,7 @@ class MockComm {
 }
 
 export
-class DummyManager extends widgets.ManagerBase<HTMLElement> {
+class DummyManager extends ManagerBase {
     constructor() {
         super();
         this.el = window.document.createElement('div');

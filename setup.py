@@ -23,9 +23,6 @@ HERE = os.path.abspath(os.path.dirname(__file__))
 name = 'sidecar'
 labext_name = '@jupyter-widgets/jupyterlab-sidecar'
 
-# Ensure a valid python version
-ensure_python('>=3.6')
-
 # Get our version
 version = get_version(os.path.join(name, '_version.py'))
 
@@ -77,6 +74,7 @@ setup_args = dict(
     author_email    = 'ipython-dev@scipy.org',
     url             = 'https://github.com/jupyter-widgets/jupyterlab-sidecar',
     license         = 'BSD',
+    python_requires = ">=3.7",
     platforms       = "Linux, Mac OS X, Windows",
     keywords        = ['Jupyter', 'Widgets', 'IPython'],
     classifiers     = [
@@ -85,10 +83,10 @@ setup_args = dict(
         'License :: OSI Approved :: BSD License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Framework :: Jupyter',
     ],
     include_package_data = True,
