@@ -11,7 +11,7 @@
   flex: 1;
 }
 
-.jp-SideBar.jp-mod-right .p-TabBar-tabCloseIcon {
+.jp-SideBar.jp-mod-right .p-TabBar-tabCloseIcon, .jp-SideBar.jp-mod-right .lm-TabBar-tabCloseIcon {
   padding: 4px 0px 4px 4px;
   background-size: 16px;
   height: 16px;
@@ -22,7 +22,7 @@
   align-self: center;
 }
 
-.jp-SideBar.jp-mod-right .p-TabBar-tabCloseIcon:hover {
+.jp-SideBar.jp-mod-right .p-TabBar-tabCloseIcon:hover, .jp-SideBar.jp-mod-right .lm-TabBar-tabCloseIcon:hover {
   background-size: 16px;
   background-image: var(--jp-icon-inverse-close-circle);
 }
