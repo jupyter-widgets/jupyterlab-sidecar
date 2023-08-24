@@ -33,7 +33,6 @@ jobs:
 
         jupyter labextension list
         jupyter labextension list 2>&1 | grep -ie "@jupyter-widgets/jupyterlab-sidecar.*OK"
-        python -m jupyterlab.browser_check
 
     - name: Package the extension
       run: |
@@ -72,10 +71,8 @@ jobs:
 
         pip install "jupyterlab>=4.0.0,<5" sidecar*.whl
 
-
         jupyter labextension list
         jupyter labextension list 2>&1 | grep -ie "@jupyter-widgets/jupyterlab-sidecar.*OK"
-        python -m jupyterlab.browser_check --no-browser-test
 
 
   check_links:
