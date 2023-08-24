@@ -9,5 +9,4 @@
  * Update this value when attributes are added/removed from
  * your models, or serialized format changes.
  */
-export
-const EXTENSION_SPEC_VERSION = '1.1.0';
+export const EXTENSION_SPEC_VERSION = '1.1.0';
