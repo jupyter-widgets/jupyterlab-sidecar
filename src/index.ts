@@ -34,6 +34,7 @@ const sidecarPlugin: JupyterFrontEndPlugin<void> = {
           w.addClass('jp-LinkedOutputView');
           w.title.label = this.model.get('title');
           w.title.closable = true;
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
           app.shell._rightHandler.sideBar.tabCloseRequested.connect(
             (sender: any, tab: any) => {
