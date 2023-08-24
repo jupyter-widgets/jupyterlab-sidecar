@@ -21,7 +21,7 @@
     "license": "BSD-3-Clause",
     "author": {
         "name": "Project Jupyter",
-        "email": ""
+        "email": "ipython-dev@scipy.org"
     },
     "main": "lib/index.js",
     "types": "./lib/index.d.ts",

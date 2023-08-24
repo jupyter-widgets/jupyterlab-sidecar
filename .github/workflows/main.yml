@@ -35,7 +35,7 @@ jobs:
         cache: 'pip'
         cache-dependency-path: setup.py
 
-    - run: pip install jupyterlab pytest nbval jupyter_packaging ipywidgets
+    - run: pip install jupyterlab pytest nbval jupyter_packaging
     - run: pip install -ve .
     - run: jupyter labextension develop . --overwrite
 

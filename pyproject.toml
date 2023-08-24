@@ -24,7 +24,9 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
 ]
-dependencies = []
+dependencies = [
+    "ipywidgets>=8,<9"
+]
 dynamic = [
     "version",
     "description",
