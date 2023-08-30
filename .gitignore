@@ -1,3 +1,20 @@
+*.bundle.*
+lib/
+node_modules/
+*.log
+.eslintcache
+.stylelintcache
+*.egg-info/
+.ipynb_checkpoints
+*.tsbuildinfo
+sidecar/labextension
+# Version file is handled by hatchling
+sidecar/_version.py
+
+# Created by https://www.gitignore.io/api/python
+# Edit at https://www.gitignore.io/?templates=python
+
+### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -8,7 +25,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -20,9 +36,12 @@ lib64/
 parts/
 sdist/
 var/
-*.egg-info/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
 .installed.cfg
 *.egg
+MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -37,38 +56,29 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
+.nox/
 .coverage
 .coverage.*
 .cache
 nosetests.xml
+coverage/
 coverage.xml
-*,cover
+*.cover
 .hypothesis/
+.pytest_cache/
 
 # Translations
 *.mo
 *.pot
-
-# Django stuff:
-*.log
-local_settings.py
-
-# Flask instance folder
-instance/
 
 # Scrapy stuff:
 .scrapy
 
 # Sphinx documentation
 docs/_build/
-docs/source/_static/embed-bundle.js
-docs/source/_static/embed-bundle.js.map
 
 # PyBuilder
 target/
-
-# IPython Notebook
-.ipynb_checkpoints
 
 # pyenv
 .python-version
@@ -76,80 +86,36 @@ target/
 # celery beat schedule file
 celerybeat-schedule
 
-# dotenv
-.env
-
-# virtualenv
-venv/
-ENV/
+# SageMath parsed files
+*.sage.py
 
 # Spyder project settings
 .spyderproject
+.spyproject
 
 # Rope project settings
 .ropeproject
 
-# =========================
-# Operating System Files
-# =========================
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
 
-# OSX
-# =========================
+# mkdocs documentation
+/site
 
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# End of https://www.gitignore.io/api/python
+
+# OSX files
 .DS_Store
-.AppleDouble
-.LSOverride
 
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-# Windows
-# =========================
-
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-
-# NPM
-# ----
-
-**/node_modules/
-sidecar/labextension/*.tgz
-
-# Coverage data
-# -------------
-**/coverage/
-
-# Packed lab extensions
-sidecar/labextension
+# Yarn cache
+.yarn/

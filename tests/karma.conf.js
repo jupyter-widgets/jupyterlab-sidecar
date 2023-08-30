@@ -5,14 +5,11 @@ module.exports = function (config) {
     reporters: ['mocha', 'karma-typescript'],
     client: {
       mocha: {
-        timeout : 10000, // 10 seconds - upped from 2 seconds
+        timeout: 10000, // 10 seconds - upped from 2 seconds
         retries: 3 // Allow for slow server on CI.
       }
     },
-    files: [
-      { pattern: "tests/src/**/*.ts" },
-      { pattern: "src/**/*.ts" }
-    ],
+    files: [{ pattern: 'tests/src/**/*.ts' }, { pattern: 'src/**/*.ts' }],
     preprocessors: {
       '**/*.ts': ['karma-typescript']
     },
@@ -22,15 +19,14 @@ module.exports = function (config) {
     singleRun: true,
     logLevel: config.LOG_INFO,
 
-
     karmaTypescriptConfig: {
       tsconfig: 'tests/src/tsconfig.json',
       reports: {
-        "text-summary": "",
-        "html": "coverage",
-        "lcovonly": {
-          "directory": "coverage",
-          "filename": "coverage.lcov"
+        'text-summary': '',
+        html: 'coverage',
+        lcovonly: {
+          directory: 'coverage',
+          filename: 'coverage.lcov'
         }
       }
     }
