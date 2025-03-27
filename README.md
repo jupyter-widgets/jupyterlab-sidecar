@@ -17,7 +17,7 @@ or
 conda install sidecar
 ```
 
-If you use JupyterLab <=2:
+If you use JupyterLab `<=2`:
 
 ```bash
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
@@ -43,7 +43,21 @@ When a single output is displayed in a Sidecar, it is allowed to occupy all of
 the vertical space available. If more content is displayed, the natural height
 is used instead.
 
-![sidecar](sidecar.gif)
+![sidecar in right panel (default)](sidecar.gif)
+
+
+### Opening a sidecar in the main work area
+
+By default, a sidecar will be displayed on the right panel, which has some limitations:
+There is a maximum width, and it can't be displayed at the same time as other elements
+in the right panel.
+
+The `anchor` parameter can be used with values `'split-right'`, `'split-left'`,
+`'split-top'`, `'split-bottom'`, `'tab-before'`, or `'tab-after'` to open a sidecar in a
+new JupyterLab window which can be re-arranged as desired.
+
+![sidecar in main work area](sidecar-main-area.gif)
+
 
 ## Development
 
