@@ -9,7 +9,7 @@ TODO: Add module docstring
 """
 
 from ipywidgets import Output
-from traitlets import Unicode, CaselessStrEnum
+from traitlets import Unicode, CaselessStrEnum, Any
 from ._frontend import EXTENSION_SPEC_VERSION
 
 module_name = "@jupyter-widgets/jupyterlab-sidecar"
@@ -28,3 +28,9 @@ class Sidecar(Output):
         default_value='right',
         allow_none=True
     ).tag(sync=True)
+    ref = Any().tag(sync=True)
+    _widget_id = Any().tag(sync=True)
+
+    @property
+    def widget_id(self):
+        return self._widget_id

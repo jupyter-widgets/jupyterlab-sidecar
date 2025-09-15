@@ -42,7 +42,7 @@ const sidecarPlugin: JupyterFrontEndPlugin<void> = {
             }
           );
           w.id = UUID.uuid4();
-
+          this.model.set('_widget_id', w.id);
           if (this.model.views && Object.keys(this.model.views).length > 1) {
             w.node.style.display = 'none';
             const key = Object.keys(this.model.views)[0];
@@ -53,10 +53,11 @@ const sidecarPlugin: JupyterFrontEndPlugin<void> = {
             });
           } else {
             const anchor = this.model.get('anchor') || 'right';
+            const ref = this.model.get('ref') || null;
             if (anchor === 'right') {
               app.shell.add(w, 'right');
             } else {
-              app.shell.add(w, 'main', { mode: anchor });
+              app.shell.add(w, 'main', { ref: ref, mode: anchor });
             }
             app.shell.activateById(w.id);
           }

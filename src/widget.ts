@@ -19,7 +19,9 @@ export class SidecarModel extends output.OutputModel {
       _view_module: SidecarModel.view_module,
       _view_module_version: SidecarModel.view_module_version,
       title: 'Sidecar',
-      anchor: 'right'
+      anchor: 'right',
+      ref: null,
+      _widget_id: null,
     };
   }
 
