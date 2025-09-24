@@ -23,6 +23,22 @@ export class SidecarModel extends output.OutputModel {
       ref: null,
       _widget_id: null,
     };
+    
+    get created() {
+      return this._viewCreated.promise;
+    }
+    
+    public resolveCreated() {
+      this._viewCreated.resolve();
+    }
+    
+    private _viewCreated = new PromiseDelegate();  // Import this from '@lumino/coreutils'
+    
+    // You also need to deserialize the ref property
+    static serializers = {
+      ...DOMWidgetModel.serializers,
+      ref: { deserialize: unpack_models as any }, // import unpack_models from '@jupyter-widgets/base'
+    };
   }
 
   initialize(attributes: any, options: any) {
