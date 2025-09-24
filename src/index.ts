@@ -54,6 +54,9 @@ const sidecarPlugin: JupyterFrontEndPlugin<void> = {
           } else {
             const anchor = this.model.get('anchor') || 'right';
             const ref = this.model.get('ref') || null;
+            if (ref) {
+              await ref.created();
+            }
             if (anchor === 'right') {
               app.shell.add(w, 'right');
             } else {
