@@ -59,6 +59,18 @@ new JupyterLab window which can be re-arranged as desired.
 ![sidecar in main work area](sidecar-main-area.gif)
 
 
+### Arrange a new sidecar with respect to another sidecar
+
+The `anchor` parameter sets the position of the new sidecar relative to the 
+notebook that opens the sidecar, by default. To open a new sidecar whose `anchor` 
+is defined relative to another sidecar otuput, set the `ref` parameter to 
+the instance of the target sidecar.
+
+For example:
+
+![sidecar arranged with respect to another sidecar](sidecar-ref-anchor.png)
+
+
 ## Development
 
 ```bash
