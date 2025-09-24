@@ -25,17 +25,17 @@ export class SidecarModel extends output.OutputModel {
       _widget_id: null,
     }
   }
-    
-  get created() {
+
+  get created(): Promise <void> {
     return this._viewCreated.promise;
   }
-  
+
   public resolveCreated() {
-    this._viewCreated.resolve(null);
+    this._viewCreated.resolve();
   }
-  
-  private _viewCreated = new PromiseDelegate();
-  
+
+  private _viewCreated: PromiseDelegate<void> = new PromiseDelegate<void>();
+
   // deserialize the ref property
   static serializers = {
     ...DOMWidgetModel.serializers,

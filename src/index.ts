@@ -53,14 +53,15 @@ const sidecarPlugin: JupyterFrontEndPlugin<void> = {
             });
           } else {
             const anchor = this.model.get('anchor') || 'right';
-            const ref = this.model.get('ref') || null;
-            if (ref) {
+            const ref = this.model.get('ref');
+            const widget_id = ref === null ? null : ref.get('_widget_id');
+            if (ref === null && widget_id !== null) {
               await ref.created();
             }
             if (anchor === 'right') {
               app.shell.add(w, 'right');
             } else {
-              app.shell.add(w, 'main', { ref: ref.get('_widget_id'), mode: anchor });
+              app.shell.add(w, 'main', { ref: widget_id, mode: anchor });
             }
             app.shell.activateById(w.id);
             this.model.resolveCreated();
