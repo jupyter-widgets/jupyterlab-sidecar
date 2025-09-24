@@ -60,6 +60,7 @@ const sidecarPlugin: JupyterFrontEndPlugin<void> = {
               app.shell.add(w, 'main', { ref: ref, mode: anchor });
             }
             app.shell.activateById(w.id);
+            this.model.resolveCreated();
           }
         }
       }
