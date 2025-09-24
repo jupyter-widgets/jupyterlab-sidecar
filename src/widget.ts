@@ -3,7 +3,8 @@
 
 import { DOMWidgetModel } from '@jupyter-widgets/base';
 import { output } from '@jupyter-widgets/jupyterlab-manager';
-
+import { PromiseDelegate } from '@lumino/coreutils';
+import { unpack_models } from '@jupyter-widgets/base';
 import { EXTENSION_SPEC_VERSION } from './version';
 
 export class SidecarModel extends output.OutputModel {
@@ -22,23 +23,23 @@ export class SidecarModel extends output.OutputModel {
       anchor: 'right',
       ref: null,
       _widget_id: null,
-    };
-    
-    get created() {
-      return this._viewCreated.promise;
     }
+  }
     
-    public resolveCreated() {
-      this._viewCreated.resolve();
-    }
-    
-    private _viewCreated = new PromiseDelegate();  // Import this from '@lumino/coreutils'
-    
-    // You also need to deserialize the ref property
-    static serializers = {
-      ...DOMWidgetModel.serializers,
-      ref: { deserialize: unpack_models as any }, // import unpack_models from '@jupyter-widgets/base'
-    };
+  get created() {
+    return this._viewCreated.promise;
+  }
+  
+  public resolveCreated() {
+    this._viewCreated.resolve(null);
+  }
+  
+  private _viewCreated = new PromiseDelegate();
+  
+  // deserialize the ref property
+  static serializers = {
+    ...DOMWidgetModel.serializers,
+    ref: { deserialize: unpack_models as any },
   }
 
   initialize(attributes: any, options: any) {

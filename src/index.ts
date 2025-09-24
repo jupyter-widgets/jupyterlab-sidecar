@@ -25,7 +25,7 @@ const sidecarPlugin: JupyterFrontEndPlugin<void> = {
     const SidecarView = class extends output.OutputView {
       model: SidecarModel;
 
-      render() {
+      async render() {
         if (!this.model.rendered) {
           super.render();
 
