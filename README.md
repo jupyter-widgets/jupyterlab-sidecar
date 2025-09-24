@@ -63,8 +63,8 @@ new JupyterLab window which can be re-arranged as desired.
 
 The `anchor` parameter sets the position of the new sidecar relative to the 
 notebook that opens the sidecar, by default. To open a new sidecar whose `anchor` 
-is defined relative to another sidecar otuput, set the `ref` parameter to 
-the instance of the target sidecar.
+is defined relative to another sidecar output, set the `ref` parameter with
+the instance of the reference sidecar.
 
 For example:
 

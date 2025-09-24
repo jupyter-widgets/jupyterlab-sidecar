@@ -30,7 +30,3 @@ class Sidecar(Output):
     ).tag(sync=True)
     ref = Instance('sidecar.Sidecar', allow_none=True).tag(sync=True, **widget_serialization)
     _widget_id = Any().tag(sync=True)
-
-    @property
-    def widget_id(self):
-        return self._widget_id
