@@ -28,7 +28,7 @@ class Sidecar(Output):
         default_value='right',
         allow_none=True
     ).tag(sync=True)
-    ref = Any().tag(sync=True)
+    ref = Instance(Sidecar).tag(sync=True, **widget_serialization)
     _widget_id = Any().tag(sync=True)
 
     @property
