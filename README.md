@@ -45,7 +45,6 @@ is used instead.
 
 ![sidecar in right panel (default)](sidecar.gif)
 
-
 ### Opening a sidecar in the main work area
 
 By default, a sidecar will be displayed on the right panel, which has some limitations:
@@ -58,7 +57,6 @@ new JupyterLab window which can be re-arranged as desired.
 
 ![sidecar in main work area](sidecar-main-area.gif)
 
-
 ### Arrange a new sidecar with respect to another sidecar
 
 The `anchor` parameter sets the position of the new sidecar relative to the 
@@ -69,7 +67,6 @@ the instance of the reference sidecar.
 For example:
 
 ![sidecar arranged with respect to another sidecar](sidecar-ref-anchor.png)
-
 
 ## Development
 
