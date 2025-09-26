@@ -119,3 +119,5 @@ dmypy.json
 
 # Yarn cache
 .yarn/
+
+sidecar/_version.py
