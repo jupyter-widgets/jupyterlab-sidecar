@@ -3,7 +3,8 @@
 
 import { DOMWidgetModel } from '@jupyter-widgets/base';
 import { output } from '@jupyter-widgets/jupyterlab-manager';
-
+import { PromiseDelegate } from '@lumino/coreutils';
+import { unpack_models } from '@jupyter-widgets/base';
 import { EXTENSION_SPEC_VERSION } from './version';
 
 export class SidecarModel extends output.OutputModel {
@@ -19,9 +20,27 @@ export class SidecarModel extends output.OutputModel {
       _view_module: SidecarModel.view_module,
       _view_module_version: SidecarModel.view_module_version,
       title: 'Sidecar',
-      anchor: 'right'
+      anchor: 'right',
+      ref: null,
+      _widget_id: null
     };
   }
+
+  get created(): Promise<void> {
+    return this._viewCreated.promise;
+  }
+
+  public resolveCreated() {
+    this._viewCreated.resolve();
+  }
+
+  private _viewCreated: PromiseDelegate<void> = new PromiseDelegate<void>();
+
+  // deserialize the ref property
+  static serializers = {
+    ...DOMWidgetModel.serializers,
+    ref: { deserialize: unpack_models as any }
+  };
 
   initialize(attributes: any, options: any) {
     super.initialize(attributes, options);

@@ -25,7 +25,7 @@ const sidecarPlugin: JupyterFrontEndPlugin<void> = {
     const SidecarView = class extends output.OutputView {
       model: SidecarModel;
 
-      render() {
+      async render() {
         if (!this.model.rendered) {
           super.render();
 
@@ -42,7 +42,7 @@ const sidecarPlugin: JupyterFrontEndPlugin<void> = {
             }
           );
           w.id = UUID.uuid4();
-
+          this.model.set('_widget_id', w.id);
           if (this.model.views && Object.keys(this.model.views).length > 1) {
             w.node.style.display = 'none';
             const key = Object.keys(this.model.views)[0];
@@ -53,12 +53,19 @@ const sidecarPlugin: JupyterFrontEndPlugin<void> = {
             });
           } else {
             const anchor = this.model.get('anchor') || 'right';
+            const ref = this.model.get('ref');
+            let widget_id: string | null = null;
+            if (ref) {
+              await ref.created;
+              widget_id = ref.get('_widget_id');
+            }
             if (anchor === 'right') {
               app.shell.add(w, 'right');
             } else {
-              app.shell.add(w, 'main', { mode: anchor });
+              app.shell.add(w, 'main', { ref: widget_id, mode: anchor });
             }
             app.shell.activateById(w.id);
+            this.model.resolveCreated();
           }
         }
       }
