@@ -45,7 +45,6 @@ is used instead.
 
 ![sidecar in right panel (default)](sidecar.gif)
 
-
 ### Opening a sidecar in the main work area
 
 By default, a sidecar will be displayed on the right panel, which has some limitations:
@@ -57,7 +56,6 @@ The `anchor` parameter can be used with values `'split-right'`, `'split-left'`,
 new JupyterLab window which can be re-arranged as desired.
 
 ![sidecar in main work area](sidecar-main-area.gif)
-
 
 ## Development
 
