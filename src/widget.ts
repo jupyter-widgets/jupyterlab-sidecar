@@ -22,11 +22,11 @@ export class SidecarModel extends output.OutputModel {
       title: 'Sidecar',
       anchor: 'right',
       ref: null,
-      _widget_id: null,
-    }
+      _widget_id: null
+    };
   }
 
-  get created(): Promise <void> {
+  get created(): Promise<void> {
     return this._viewCreated.promise;
   }
 
@@ -39,8 +39,8 @@ export class SidecarModel extends output.OutputModel {
   // deserialize the ref property
   static serializers = {
     ...DOMWidgetModel.serializers,
-    ref: { deserialize: unpack_models as any },
-  }
+    ref: { deserialize: unpack_models as any }
+  };
 
   initialize(attributes: any, options: any) {
     super.initialize(attributes, options);
