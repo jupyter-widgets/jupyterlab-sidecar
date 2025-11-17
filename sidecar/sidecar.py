@@ -33,7 +33,10 @@ class Sidecar(Output):
 
     @observe('ref')
     def _validate_ref_anchor(self, *args):
-        if self.ref and self.ref.anchor == 'right':
+        if self.ref is None:
+            return
+
+        if self.ref.anchor == 'right':
             warnings.warn(
                 "`ref` cannot be set when `ref.anchor == 'right'`. "
                 "Proceeding with `ref = None`.", UserWarning
