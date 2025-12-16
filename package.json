@@ -12,7 +12,8 @@
         "lib/**/*.js",
         "dist/*.js",
         "css/*.css",
-        "style/index.js"
+        "style/index.js",
+        "src/*.ts"
     ],
     "homepage": "https://github.com/jupyter-widgets/jupyterlab-sidecar",
     "bugs": {
