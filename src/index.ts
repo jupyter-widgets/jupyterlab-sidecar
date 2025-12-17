@@ -84,3 +84,4 @@ const sidecarPlugin: JupyterFrontEndPlugin<void> = {
 };
 
 export default sidecarPlugin;
+export * from './widget';
